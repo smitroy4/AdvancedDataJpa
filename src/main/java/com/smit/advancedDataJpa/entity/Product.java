@@ -1,4 +1,4 @@
-package com.smit.jpaPractice.entity;
+package com.smit.advancedDataJpa.entity;
 
 
 import jakarta.persistence.*;

@@ -1,12 +1,13 @@
-package com.smit.jpaPractice;
+package com.smit.advancedDataJpa;
 
-import com.smit.jpaPractice.entity.Product;
-import com.smit.jpaPractice.repository.ProductRepository;
+import com.smit.advancedDataJpa.entity.Product;
+import com.smit.advancedDataJpa.repository.ProductRepository;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import java.math.BigDecimal;
+import java.time.LocalDateTime;
 import java.util.List;
 
 @SpringBootTest
@@ -43,5 +44,26 @@ class ApplicationTests {
         List<Product> productList = productRepository.findByTitle("Pepsi");
         productList.stream().forEach(product -> System.out.println(product));
     }
+
+    @Test
+    void getRepositoryByTime(){
+        List<Product> productByTime = productRepository.findByCreatedAtAfter(
+                LocalDateTime.of(2024, 1, 1, 1, 0, 0)
+        );
+        System.out.println(productByTime);
+    }
+
+    @Test
+    void getRepositoryByQtyAndPrice(){
+        List<Product> productByQtyPrice = productRepository.findByQuantityAndPrice(4,BigDecimal.valueOf(10));
+        System.out.println(productByQtyPrice);
+    }
+
+    @Test
+    void getRepositoryByQtyOrPrice(){
+        List<Product> productByQtyPrice = productRepository.findByQuantityOrPrice(20,BigDecimal.valueOf(30));
+        System.out.println(productByQtyPrice);
+    }
+
 
 }
