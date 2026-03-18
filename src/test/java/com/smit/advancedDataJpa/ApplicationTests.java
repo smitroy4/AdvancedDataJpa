@@ -5,6 +5,7 @@ import com.smit.advancedDataJpa.repository.ProductRepository;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.data.domain.Pageable;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
@@ -44,7 +45,7 @@ class ApplicationTests {
 //    3
     @Test
     void getRepositoryByTitle(){
-        List<Product> productList = productRepository.findByTitle("Pepsi");
+        List<Product> productList = productRepository.findByTitle("Pepsi", Pageable.unpaged());
         productList.forEach(System.out::println);
     }
 
@@ -88,7 +89,7 @@ class ApplicationTests {
 //    9
     @Test
     void getRepositoryByContainingIgnoreCase(){
-        List<Product> productByContainingIgnoreCase = productRepository.findByTitleContainingIgnoreCase("Choco");
+        List<Product> productByContainingIgnoreCase = productRepository.findByTitleContainingIgnoreCase("Choco", Pageable.unpaged());
         productByContainingIgnoreCase.forEach(System.out::println);
     }
 

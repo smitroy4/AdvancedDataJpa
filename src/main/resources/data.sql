@@ -1,6 +1,27 @@
-INSERT INTO jpa_practice.product_table(price,quantity,sku,title)
+INSERT INTO product_table (price, quantity, sku, title)
 VALUES
-    (10,4,'parleg786','ParleG Biscuit'),
-    (20,10,'pepsi420','Pepsi'),
-    (30,15,'cola99','Coca Cola'),
-    (15,2,'lays100','Lays Chips');
+        (40, 5, 'kurkure_101', 'Kurkure'),
+        (25, 3, 'maggi_202', 'Maggi Noodles'),
+        (60, 8, 'dairy_milk_303', 'Dairy Milk Chocolate'),
+        (35, 4, 'perk_404', 'Perk Chocolate'),
+        (80, 12, 'sprite_505', 'Sprite'),
+        (90, 15, 'fanta_606', 'Fanta'),
+        (110, 20, 'red_bull_707', 'Red Bull'),
+        (50, 6, 'good_day_808', 'Good Day Biscuit'),
+        (45, 5, 'bourbon_909', 'Bourbon Biscuit'),
+        (70, 10, 'kitkat_111', 'KitKat'),
+        (55, 7, 'five_star_222', '5 Star Chocolate'),
+        (65, 9, 'munch_333', 'Munch Chocolate'),
+        (30, 4, 'hide_seek_444', 'Hide & Seek Biscuit'),
+        (20, 2, 'tiger_555', 'Tiger Biscuit'),
+        (140, 25, 'tropicana_666', 'Tropicana Juice'),
+        (100, 18, 'real_777', 'Real Juice'),
+        (95, 14, 'thums_up_888', 'Thums Up'),
+        (85, 13, 'mountain_dew_999', 'Mountain Dew'),
+        (75, 11, 'maaza_000', 'Maaza'),
+        (120, 30, 'paper_boat_111', 'Paper Boat Drink'),
+        (130, 22, 'bingo_222', 'Bingo Chips'),
+        (140, 24, 'pringles_333', 'Pringles'),
+        (160, 28, 'oreo_444', 'Oreo Biscuit'),
+        (170, 32, 'milk_bikis_555', 'Milk Bikis'),
+        (180, 35, 'little_hearts_666', 'Little Hearts Biscuit');
