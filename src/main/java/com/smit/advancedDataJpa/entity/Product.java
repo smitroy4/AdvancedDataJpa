@@ -1,6 +1,7 @@
 package com.smit.advancedDataJpa.entity;
 
 
+import com.smit.advancedDataJpa.entity.categories.ProductCategories;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -44,6 +45,10 @@ public class Product {
 
     @Column(nullable = false)
     private Integer quantity;
+
+    @Column(nullable = false)
+    @Enumerated(value = EnumType.STRING)
+    private ProductCategories category;
 
     @CreationTimestamp
     private LocalDateTime createdAt;
