@@ -1,5 +1,6 @@
 package com.smit.advancedDataJpa.repository;
 
+import com.smit.advancedDataJpa.dto.ProductsInfo;
 import com.smit.advancedDataJpa.entity.Product;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
@@ -37,4 +38,8 @@ public interface ProductRepository extends JpaRepository<Product, Long> {
     List<Product> findByOrderByPrice();
 
     List<Product> findBy(Sort sort);
+
+    @Query("select p.id as id, p.title as title, p.price as price from Product p")
+    List<ProductsInfo> getAllProductsInfo();
+
 }
